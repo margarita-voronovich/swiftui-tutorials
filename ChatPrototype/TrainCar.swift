@@ -30,18 +30,43 @@ struct TrainTrack: View {
     }
 }
 
+//CUSTOM FIXED SPACING PREVIEW
+//struct TrainCar_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VStack {
+//            HStack() {
+//                TrainCar(.rear)
+//                TrainCar(.middle)
+//                TrainCar(.front)
+//            }
+//            TrainTrack()
+//            
+//            Text("Custom Spacing")
+//        }
+//    }
+//}
 
-struct TrainCar_Previews: PreviewProvider {
-    static var previews: some View {
+struct ScaledSpacing: View {
+    @ScaledMetric var trainCarSpace = 15
+    
+    var body: some View {
         VStack {
-            HStack(spacing: 20) {
+            Text("Scaled Spacing")
+            HStack(spacing:trainCarSpace) {
                 TrainCar(.rear)
                 TrainCar(.middle)
                 TrainCar(.front)
             }
             TrainTrack()
-            
-            Text("Custom Spacing")
+        }
+    }
+}
+
+//SCALED SPACING PREVIEW
+struct ScaledSpacing_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            ScaledSpacing()
         }
     }
 }

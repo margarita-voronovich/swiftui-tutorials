@@ -22,7 +22,7 @@ struct ChatPrototypeApp: App {
                     .tabItem {
                         Label("Text", systemImage: "bird.fill")
                     }
-                
+                                                
                 CaptionedPhoto(assetName: "IMG_7145", captionText: "This photo is taller than it is wide.")
                     .tabItem {
                         Label("Overlay", systemImage: "arrow.2.circlepath")
@@ -36,6 +36,11 @@ struct ChatPrototypeApp: App {
                 EventTile(event: Event(title: "Buy Daisies", date: .now, location: "Flower Shop", symbol: "gift"))
                     .tabItem {
                         Label("Stripe", systemImage: "moon.stars.fill")
+                    }
+                
+                ScaledSpacing()
+                    .tabItem {
+                        Label("Spacing", systemImage: "staroflife.fill")
                     }
             }
         }
